@@ -58,6 +58,12 @@ const Contact = () => (
   </div>
 )
 
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>No match for <code>{location.pathname}</code></h3>
+  </div>
+)
+
 const BasicExample = () => (
   <Router>
     <div>
@@ -74,6 +80,7 @@ const BasicExample = () => (
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
       <Route path="/contact" component={Contact} />
+      <Route component={NoMatch} />
     </div>
   </Router>
 )
