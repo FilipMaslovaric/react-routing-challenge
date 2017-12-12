@@ -2,7 +2,8 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Switch
 } from 'react-router-dom';
 import NoMatch from './NoMatch';
 import Home from './Home';
@@ -21,12 +22,13 @@ const BasicExample = () => (
             </ul>
 
             <hr />
-
+        <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/topics" component={Topics} />
             <Route path="/contact" component={Contact} />
             <Route component={NoMatch} />
+        </Switch>
         </div>
     </Router>
 )
